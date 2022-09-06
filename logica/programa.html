@@ -1,5 +1,8 @@
 <meta charset="UTF-8">
 
+<h1>PROGRAMA</h1>
+<br>
+
 HTML
 <br>
 
@@ -52,5 +55,30 @@ JavaScript
     document.write("Carlos nació en el año...")
     document.write("<br>")
     document.write(2020 - 15)
+
+    document.write("<br>")
+    document.write("<br>")
+    // Reduciendo alteraciones
+    document.write("<br>")
+    document.write("Juan tiene: " + (2020-2000) + "años"); // Este código es estático
+    document.write("<br>")
+    document.write("Pedro tiene: " + (2020-1995) + "años"); // Este código es estático
+    document.write("<br>")
+    document.write("Carlos tiene: " + (2020-2005) + "años"); // Este código es estático
+
+    // Trabajar con variables es mejor porque en caso de tener que actualizar
+    // el código, solo se tiene que modificar el valor de la variable y no cada
+    // elemento de forma manual
+    document.write("<br>")
+    document.write("<br>")
+
+    var anho = 2020;
+    document.write("Juan tiene: " + (anho-2000) + "años");
+
+    anho = 2030; // Se actualiza el valor de la variable "anho"
+    document.write("Juan tiene: " + (anho-2000) + "años");
+
+    anho = 2015; // Se actualiza el valor de la variable "anho"
+    document.write("Juan tiene: " + (anho-2000) + "años");
 
 </script>
