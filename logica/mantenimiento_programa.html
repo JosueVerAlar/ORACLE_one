@@ -4,26 +4,57 @@
 
 <script>
 
-    function saltarlinea() { // Se crea una funcion
-        document.write("<br>")
-    }
-
-    var anho = 2020;
+    var anho = 2000;
     var saltolinea = "<br>"
 
-    document.write("Juan tiene: " + (anho - 2000) + "años");
-    document.write(saltolinea); // Devuelve texto en la pantalla
+    function saltarlinea() { // Se crea una funcion
 
-    saltarlinea(); // Se llama a la función "Salto de linea"
+        document.write("<br>")
+    
+    }
+
+    function imprimir(frase) {
+
+        // document.write("imprimir alguna cosa")
+        document.write(frase)
+
+    }
+
+    // Este código calcula las edades de Juan, Pedro y Carlos
+
+    document.write("Juan tiene: " + (2020 - anho) + "años");
+    document.write(saltolinea); // Devuelve texto en la pantalla
 
     alert("Hola") // Devuelve un mensaje
 
     anho = 2030; // Se actualiza el valor de la variable "anho"
-    document.write("Juan tiene: " + (anho - 2000) + "años");
-    document.write(saltolinea);
+    imprimir("Juan tiene: " + (2030 - anho) + "años");
+    saltarlinea(); // Se llama a la función "Salto de linea"
 
     anho = 2015; // Se actualiza el valor de la variable "anho"
-    document.write("Juan tiene: " + (anho - 2000) + "años");
-    document.write(saltolinea);
+    imprimir("Juan tiene: " + (2015 - anho) + "años");
+    saltarlinea();
 
+    /* Este es otro ejemplo con el código más simplificado y depurado
+       usando las funciones como apoyo */
+    
+   function saltarlinea() { // Se crea una funcion
+
+        document.write("<br>");
+
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarlinea();
+        saltarlinea();
+
+    }
+
+    imprimir("Juan tiene: " + (anho - 2000) + "años");
+    imprimir("Pedro tiene: " + (anho - 2000) + "años");
+    imprimir("Carlos tiene: " + (anho - 2000) + "años");
+    saltarlinea();
+    
 </script>
