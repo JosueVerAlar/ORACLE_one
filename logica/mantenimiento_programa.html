@@ -4,18 +4,26 @@
 
 <script>
 
+    function saltarlinea() { // Se crea una funcion
+        document.write("<br>")
+    }
+
     var anho = 2020;
     var saltolinea = "<br>"
 
-    document.write("Juan tiene: " + (anho-2000) + "años");
-    document.write(saltolinea);
+    document.write("Juan tiene: " + (anho - 2000) + "años");
+    document.write(saltolinea); // Devuelve texto en la pantalla
+
+    saltarlinea(); // Se llama a la función "Salto de linea"
+
+    alert("Hola") // Devuelve un mensaje
 
     anho = 2030; // Se actualiza el valor de la variable "anho"
-    document.write("Juan tiene: " + (anho-2000) + "años");
+    document.write("Juan tiene: " + (anho - 2000) + "años");
     document.write(saltolinea);
 
     anho = 2015; // Se actualiza el valor de la variable "anho"
-    document.write("Juan tiene: " + (anho-2000) + "años");
+    document.write("Juan tiene: " + (anho - 2000) + "años");
     document.write(saltolinea);
 
 </script>
