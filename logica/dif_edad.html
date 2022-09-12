@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<h1>Nuestra diferencia de edad</h1>
+
+<p>
+    Básicamente la idea de este programa es demostrar la diferencia
+    de edades que hay entre mi hermano menor y yo. Se toma en consideración
+    dos funciones en el script para este cometido, (saltarLinea e imprimir).
+</p>
+<br><br>
+
+<script>
+
+    var edadDaniel = 20;
+    var edadJuan = 24;
+    var diferencia = (edadJuan - edadDaniel);
+
+    function saltarLinea(){
+
+        document.write("<br>");
+        document.write("<br>");
+    
+    }
+
+    function imprimir(mensaje) {
+
+        document.write(mensaje);
+        saltarLinea();
+        
+    }
+
+    imprimir("Yo tengo " + edadJuan + " años.")
+    imprimir("Mi hermano Daniel tiene " + edadDaniel + " años.")
+    imprimir("Por lo tanto, la diferencia de edad entre mi hermano y yo es de " + diferencia + " años.")
+
+</script>
