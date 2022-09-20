@@ -1,5 +1,10 @@
 <meta charset="UTF-8">
-<h1>PROGRAMA CALCULO IMC</h1>
+<h1>PROGRAMA DE CALCULO</h1>
+<br>
+
+<h2>Puntos de un equipo de futbol</h2>
+<br>
+
 <script>
 
     function saltarLinea() {
@@ -13,18 +18,18 @@
         saltarLinea();
     }
 
-    function calcularImc(nombre, peso, altura) {
-        imc = peso / (altura * altura);
-        // return(imc);
-        imprimir("El IMC calculado de" + nombre + "es: " + imc);
-    }
+    // parseInt convierte de texto a número en JavaScript
+    var victorias = parseInt(prompt("Informe cantidad de victorias: "));
+    var empates = parseInt(prompt("Informe cantidad de empates: "));
 
-   nombreInformado = prompt("Informe su nombre: ")
-   pesoInformado = prompt(nombreInformado + ", informe su peso: ")
-   alturaInformado = prompt(nombreInformado + ", informe su altura: ")
+    /*
+    texto * número = número
+    "10" * 2 = 20
+    "10" + 20 = 1020
+    */
 
-   imcCalculado = calcularImc(pesoInformado, alturaInformado)
+    puntosTotal = (victorias * 3) + empates;
 
-   imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
+    imprimir("El total de puntos del equipo es: " + puntosTotal);
 
 </script>
