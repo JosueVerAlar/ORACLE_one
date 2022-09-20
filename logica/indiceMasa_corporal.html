@@ -1,5 +1,11 @@
 <meta charset="UTF-8">
+
 <h1>PROGRAMA CALCULO IMC</h1>
+<br>
+
+<h2>(Índice de Masa Corporal)</h2>
+<br>
+
 <script>
 
     /*
@@ -13,44 +19,45 @@
     function saltarLinea() {
         document.write("<br>");   
         document.write("<br>");    
-        document.write("<br>");
-        document.write("<hr>");
-        document.write("<br>");    
         document.write("<br>");    
     }  
     
     function imprimir(frase) {
-        document.write("<big>" + frase + "</big>");
+        document.write(frase);
         saltarLinea();
     }
 
-    function calcularImc(peso, altura, nombre) {
+    function calcularImc(peso, altura) {
         imc = peso / (altura * altura);
         // return(imc);
-        imprimir("El IMC calculado de" + nombre + "es: " + imc);
+        imprimir("El IMC calculado de " + nombre + " es: " + imc);
     }
 
-    /* pesoJosue = 71
-    alturaJosue = 1.72
-    imcJosue = pesoJosue / (alturaJosue * alturaJosue)
-    imcJosue = calcularImc(pesoJosue, alturaJosue);
-    imprimir ("El IMC de Josue es: " + imcJosue);
+   // calcularImc(71, 1.78, "Josue");
+   // calcularImc(83, 1.80, "Christian");
 
-    pesoFelipe = 75
-    alturaFelipe = 1.73
-    imcFelipe = calcularImc(pesoFelipe, alturaFelipe);
-    imprimir ("El IMC de Josue es: " + imcJosue);
-    */ 
-   calcularImc(71, 1.78, "Josue");
-   calcularImc(83, 1.80, "Christian");
-   calcularImc(90, 1.95, "Gerardo");
-
-   nombreInformado = prompt("Informe su nombre: ")
+   nombre = prompt("Informe su nombre: ")
    pesoInformado = prompt(nombreInformado + ", informe su peso: ")
    alturaInformado = prompt(nombreInformado + ", informe su altura: ")
 
    imcCalculado = calcularImc(pesoInformado, alturaInformado)
 
    imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
+
+    if (imcCalculado <= 18.5) {
+        imprimir("IMC abajo de lo recomendado");
+    }
+
+    if (imcCalculado >= 25 && imcCalculado <= 30) {
+        imprimir("IMC normal");
+    }
+
+    /* if (imcCalculado < 18.5) {
+        imprimir("IMC abajo de lo recomendado");
+    }
+
+    if (imcCalculado < 18.5) {
+        imprimir("IMC abajo de lo recomendado");
+    }*/
 
 </script>
