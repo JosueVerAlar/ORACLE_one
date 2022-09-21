@@ -1,7 +1,13 @@
 <meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo IMC</title>
+</head>
 
 <h1>PROGRAMA CALCULO IMC</h1>
-<br>
 
 <h2>(Índice de Masa Corporal)</h2>
 <br>
@@ -17,9 +23,7 @@
     */
 
     function saltarLinea() {
-        document.write("<br>");   
-        document.write("<br>");    
-        document.write("<br>");    
+        document.write("<br>");
     }  
     
     function imprimir(frase) {
@@ -29,35 +33,30 @@
 
     function calcularImc(peso, altura) {
         imc = peso / (altura * altura);
-        // return(imc);
-        imprimir("El IMC calculado de " + nombre + " es: " + imc);
+        imprimir(imc);
     }
 
-   // calcularImc(71, 1.78, "Josue");
-   // calcularImc(83, 1.80, "Christian");
+   nombre = prompt("Informe su nombre: ");
+   pesoInformado = parseFloat(prompt(nombre + ", informe su peso: "));
+   alturaInformado = parseFloat(prompt(nombre + ", informe su altura: "));
 
-   nombre = prompt("Informe su nombre: ")
-   pesoInformado = prompt(nombreInformado + ", informe su peso: ")
-   alturaInformado = prompt(nombreInformado + ", informe su altura: ")
-
-   imcCalculado = calcularImc(pesoInformado, alturaInformado)
-
-   imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
-
-    if (imcCalculado <= 18.5) {
-        imprimir("IMC abajo de lo recomendado");
-    }
-
-    if (imcCalculado >= 25 && imcCalculado <= 30) {
-        imprimir("IMC normal");
-    }
-
-    /* if (imcCalculado < 18.5) {
-        imprimir("IMC abajo de lo recomendado");
-    }
+   imprimir(nombre + ", su IMC calculado es: ")
+   imcCalculado = calcularImc(pesoInformado, alturaInformado);
 
     if (imcCalculado < 18.5) {
-        imprimir("IMC abajo de lo recomendado");
-    }*/
+        imprimir("NOTA: IMC abajo de lo recomendado");
+    }
+
+    if (imcCalculado >= 18.5 ) {
+        if (imcCalculado < 25) {
+            imprimir("NOTA: IMC normal");
+        }
+    }
+    
+    if (imcCalculado >= 25 ) {
+        if (imcCalculado < 30) {
+            imprimir("NOTA: IMC arriba de lo recomendado (sobrepeso)");
+        }
+    }
 
 </script>
