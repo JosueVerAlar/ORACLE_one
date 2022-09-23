@@ -7,56 +7,40 @@
     <title>Calculo IMC</title>
 </head>
 
-<h1>PROGRAMA CALCULO IMC</h1>
-
-<h2>(Índice de Masa Corporal)</h2>
+<h1>Juego de Adivinacion </h1>
 <br>
 
 <script>
 
-    /*
-    
-    Lo mejor es crear muchas funciones que hagan una sola cosa
-    ya que al crear una función muy compleja y con un objetivo específico
-    limita mucho su reutilización a lo largo del código 
-    
-    */
-
     function saltarLinea() {
+
         document.write("<br>");
-    }  
+        document.write("<br>");
+        document.write("<br>");
+
+    };
     
     function imprimir(frase) {
+
         document.write(frase);
         saltarLinea();
-    }
-
-    function calcularImc(peso, altura) {
-        imc = peso / (altura * altura);
-        imprimir(imc);
-    }
-
-   nombre = prompt("Informe su nombre: ");
-   pesoInformado = parseFloat(prompt(nombre + ", informe su peso: "));
-   alturaInformado = parseFloat(prompt(nombre + ", informe su altura: "));
-
-   imprimir(nombre + ", su IMC calculado es: ");
-   imcCalculado = calcularImc(pesoInformado, alturaInformado);
-
-   if (imcCalculado < 18.5) {
-       imprimir("NOTA: IMC abajo de lo recomendado");
-   };
-
-   if (imcCalculado >= 18.5 ) {
-       if (imcCalculado < 25) {
-           imprimir("NOTA: IMC normal");
-       };
-   };
     
-   if (imcCalculado >= 25 ) {
-       if (imcCalculado < 30) {
-           imprimir("NOTA: IMC arriba de lo recomendado (sobrepeso)");
-       };
-   };
+    };
+
+    var numeroPensado = Math.round((Math.random() * 10));
+    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+    if (numeroPensado == numeroLanzado){
+
+        imprimir("Usted acertó");
+
+    };
+
+    if (numeroPensado != numeroLanzado){
+
+        imprimir("Usted falló, el número pensado era " + numeroPensado);
+
+    };
+
 
 </script>
