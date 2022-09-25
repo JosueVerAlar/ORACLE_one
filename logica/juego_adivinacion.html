@@ -28,17 +28,38 @@
     };
 
     var numeroPensado = Math.round((Math.random() * 10));
-    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+    var intentos = 3;
+    var contador = 1
 
-    if (numeroPensado == numeroLanzado){
+    while (contador <= intentos) {
 
-        imprimir("Usted acertó");
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+        if (numeroPensado == numeroLanzado){
+
+            alert("Usted acertó en el intento " + contador + "el número pensado era " + numeroPensado);
+            break;
+
+        } else {
+
+            alert("Usted falló, el número era " + numeroPensado);
+
+        }
+
+        contador++;
+    }
+
+    if (numeroPensado == numeroLanzado) {
+
+        imprimir("Usted acertó en el intento " + contador + "el número es: " + numeroPensado);
 
     } else {
 
-        imprimir("Usted falló, el número pensado era " + numeroPensado);
+        alert("Usted falló, el número era: " + numeroPensado);
 
-    };
+    }
+
+    imprimir("Fin.");
 
 
 </script>
