@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de las edades de la familia</title>
+</head>
+
+<h1>Media de las edades de la familia</h1>
+<br>
+
+<script>
+
+    function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    };
+    
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+    
+    };
+
+    /*
+
+    numero = 5
+    multiplicador = 1
+
+    numero * multiplicador --> 5 * 1 --> 5
+    
+    */
+    
+    var multiplicador = 1
+    imprimir("While")
+    while (multiplicador <= 10) {
+
+        imprimir(5 * multiplicador);
+        multiplicador++; // esto es igual a decir que el valor del multiplicador se incrementará de uno en uno
+                         // es decir; " multiplicador = multiplicador + 1; "
+    }
+
+    imprimir("For")
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+
+        imprimir(5 * multiplicador);
+
+    }
+
+</script>
