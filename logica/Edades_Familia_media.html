@@ -28,28 +28,32 @@
     };
 
     /*
+   
+    var edadPadre = 42;
+    var edadMadre = 38;
+    var edadHijo = 15;
+    var edadHija = 12;
 
-    numero = 5
-    multiplicador = 1
-
-    numero * multiplicador --> 5 * 1 --> 5
-    
+    var totalEdad = edadHija + edadHijo + edadMadre + edadPadre;
+    var mediaEdad = totalEdad / 4;
+   
     */
-    
-    var multiplicador = 1
-    imprimir("While")
-    while (multiplicador <= 10) {
 
-        imprimir(5 * multiplicador);
-        multiplicador++; // esto es igual a decir que el valor del multiplicador se incrementará de uno en uno
-                         // es decir; " multiplicador = multiplicador + 1; "
-    }
+    var numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia: "));
+    var contador = 1
+    var totalEdades = 0
 
-    imprimir("For")
-    for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+    while (contador <= numeroMiembros) {
 
-        imprimir(5 * multiplicador);
+        edad = parseInt(prompt("Ingrese la edad del familiar " + contador));
+        totalEdades = totalEdades + edad; // Para que se puedan sumar la variable "totalEdades"
+        contador++;                       // debe estar fuera del ciclo WHILE
 
     }
+
+    var mediaEdades = totalEdades / numeroMiembros;
+
+    imprimir("La media de las edades de la familia es " + mediaEdades);
+    imprimir("Fin.")
 
 </script>
