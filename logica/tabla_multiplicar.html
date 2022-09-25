@@ -27,16 +27,29 @@
     
     };
 
-    var anhoMundial = 1930;
-    var limite = pasrInt(prompt("Ingrese el año límite para calcular: "))
-    
-    while (anhoMundial < limite) {
+    /*
 
-        imprimir("Hubo mundial de la FIFA en el año " + anhoMundial)
-        anhoMundial = anhoMundial + 4;
+    numero = 5
+    multiplicador = 1
+
+    numero * multiplicador --> 5 * 1 --> 5
     
+    */
+    
+    var multiplicador = 1
+    imprimir("While")
+    while (multiplicador <= 10) {
+
+        imprimir(5 * multiplicador);
+        multiplicador++; // esto es igual a decir que el valor del multiplicador se incrementará de uno en uno
+
     }
 
-    imprimir("Fin.")
+    imprimir("For")
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador = multiplicador + 1) {
+
+        imprimir(5 * multiplicador);
+
+    }
 
 </script>
