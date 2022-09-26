@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincel Interactivo</title>
+</head>
+
+
+<canvas width="600" height="400">
+
+</canvas>
+
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = color;
+    pincel.fillRect(x, y, 50, 50);
+
+    function axibirAlerta(evento) {
+
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        console.log(evento);
+        alert(x + ", " + y);
+
+    }
+
+    function dibujarCirculo(evento) {
+
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2 * 3.14);
+        pincel.fill();
+
+        alert(x + ", " + y);
+
+    }
+
+    pantalla.onclick = dibujarCirculo;
+
+</script>
