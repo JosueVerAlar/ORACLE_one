@@ -15,30 +15,37 @@
 
 <script>
 
-    var pantalla = document.querySelector("canvas");
-    var pincel = pantalla.getContext("2d");
+    function dibujarCuadrado(x, y, color){
 
-    pincel.fillStyle = "lightgrey"; // propiedad
-    pincel.fillRect(0, 0, 600, 400);// función
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
 
-    pincel.fillStyle = "green"; // propiedad
-    pincel.fillRect(0, 0, 200, 400);// función
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x, y, 50, 50);
 
-    pincel.fillStyle = "red"; // propiedad
-    pincel.fillRect(400, 0, 200, 400);// función
+    }
 
-    pincel.fillStyle = "yellow";
-    pincel.beginPath(); //con esta función inicia un nuevo camino el pincel
-    pincel.moveTo(300, 200);
-    pincel.lineTo(200, 400);
-    pincel.lineTo(400, 400);
-    pincel.fill();
+    /*
+    var x = 0;
+    while(x < 600) {
 
-    pincel.fillStyle = "blue";
-    pincel.beginPath(); //con esta función inicia un nuevo camino el pincel
-    pincel.arc(300, 200, 50, 0, 2 * 3.14);
-    pincel.fill();
+        dibujarCuadrado(100, 0, "red");
+        dibujarCuadrado(100, 0, "yellow");
+        dibujarCuadrado(100, 0, "green");
+        x = x + 50;
 
-    // Para más información buscar "documentación 2d canvas"
+    }
+    */
+
+    for (var x = 0; x < 600; x = x + 50) {
+
+        dibujarCuadrado(100, 0, "red");
+        dibujarCuadrado(100, 0, "yellow");
+        dibujarCuadrado(100, 0, "green");
+    
+    }
+
 
 </script>
