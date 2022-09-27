@@ -14,40 +14,43 @@
     
     var pantalla = document.querySelector("canvas");
     var pincel = pantalla.getContext("2d");    
-    pincel.fillStyle = "grey";
+    pincel.fillStyle = "lightgrey";
     pincel.fillRect(0, 0, 600, 400); 
-    var colores = ["blue", "red", "green"];
-    var indiceColorActual = 0; // comienza con blue
 
-    function dibujarCirculo(evento) {
+    function disenharCircunferencia(x, y, radio) {
 
-        var x = evento.pageX - pantalla.offsetLeft;
-        var y = evento.pageY - pantalla.offsetTop;
-
-        pincel.fillStyle = colores[indiceColorActual];
+        pincel.fillStyle = "blue";
         pincel.beginPath();
-        pincel.arc(x, y, 10, 0, 2 * 3.14);
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);
         pincel.fill();
 
-        console.log(x + ", " + y);        
-    
     }
 
-    pantalla.onclick = dibujarCirculo;
+    function limpiarPantalla () {
 
-    function alterarColor() {
+        pincel.clearRect(0, 0, 600, 400);
 
-        indiceColorActual++;
-        if(indiceColorActual>= colores.length) {
+    }
 
-             indiceColorActual = 0; //vuelve para el primer color, blue
+    var x = 0
+    var sentido = 1;
 
+    function actualizarPantalla(){
+
+        limpiarPantalla();
+        if(x > 600){
+            sentido = -1;
+        }else if(x < 0){
+            sentido = 1;
         }
 
-        return false; //menú contextual padrón de `canvas` no sea exhibido
-
+        disenharCircunferencia(x,20,10);
+        x = x + sentido;
     }
 
-    pantalla.oncontextmenu = alterarColor;
+    setInterval(actualizarPantalla,5);
+
+    //setInterval(actualizarPantalla, 5) // el número menciona que se solicita
+                                       // la información cada 5 milisegundos.
 
 </script> 
