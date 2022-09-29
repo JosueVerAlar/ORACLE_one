@@ -4,6 +4,12 @@ body {
 
 }
 
+.titulo-principal {
+
+    padding-left: 30px;
+
+}
+
 #banner {
 
     width: 100%;
@@ -13,10 +19,11 @@ body {
 .principal {
 
     background-color: #CCCCCC;
+    padding: 20px; /* espaciamiento interno del <div> */
 
 }
 
-h1 {
+.tituloCentrado {
 
     text-align: center;
 
@@ -43,18 +50,28 @@ em strong {
 .diferenciales {
 
     background-color: #FFFFFF;
-
-}
-
-h2 {
-
-    text-align: center;
+    padding: 30px;
 
 }
 
 .items {
 
     font-style: italic;
+
+}
+
+ul {
+
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+
+}
+
+.imagenDiferenciales {
+
+    width: 50%;
 
 }
 
