@@ -4,20 +4,50 @@ body {
 
 main {
     display: flex;
-    margin-left: 80px;
+    justify-content: space-around;
     margin-bottom: 50px;
 }
 
 .input-texto {
+    display: flex;
+    justify-content: left;
     margin-top: 90px;
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+    color: #0A3871;
+}
+
+.salida {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
 .mensaje {
-    position: relative;
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
     margin-left: 90px;
     background-image: url("imagenes/Muñeco.png");
     background-repeat: no-repeat;
     background-position: 18px;
     background-size: 300px;
+    width: 350px;
+    height: 540px;
+    color: #495057;
+    border-color: #e5e5e5;
+    border-radius: 15px;
+}
+
+.copiar {
+    background-color: white;
+    border-color: black;
+    margin-top: -40px;
+    margin-left: 120px;
+    border-radius: 6px;
+    display: flex;
+    height: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
 }
