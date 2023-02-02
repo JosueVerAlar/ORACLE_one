@@ -1,6 +1,11 @@
 const inputTexto = document.querySelector(".input-texto")
 const mensaje = document.querySelector(".mensaje")
 
+let refresh = document.getElementById('recargar');
+refresh.addEventListener('click', _ => {
+    location.reload();
+})
+
 /*
 La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -34,7 +39,14 @@ function encriptar(stringEncriptada) {
     return stringEncriptada;
 }
 
-function btnDesencriptar(stringDesencriptada) {
+function btnDesencriptar(){
+    const textoDesencriptado = desencriptar(inputTexto.value)
+    mensaje.value = textoDesencriptado;
+    mensaje.style.backgroundImage = "none"
+    inputTexto.value = ""
+}
+
+function desencriptar(stringDesencriptada) {
     let matrizCodigo = [["e", "enter"],
                         ["i", "imes"],
                         ["a", "ai"],
@@ -48,7 +60,6 @@ function btnDesencriptar(stringDesencriptada) {
             stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
         }
     }
-
     return stringDesencriptada;
 }
 

@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <img src="imagenes/Logo.png" alt="Logo alura 'a'">
+            <img id="recargar" src="imagenes/Logo.png" alt="Logo alura 'a'">
     </header>
     
     <main>
@@ -18,7 +18,14 @@
             <textarea class="input-texto" name="texto origen" id="to" cols="40" rows="6"
             placeholder="Ingrese el texto aqui"></textarea>
 
+            <br>
+            <div class="aviso">
+                <img class="informacion" src="imagenes/bi_exclamation-circle-fill.png" alt="signo de exclamacion">
+                Solo letras minusculas y sin acentos
+            </div>
+            
             <div class="botones">
+                <br>
                 <button class="encriptar" onclick="btnEncriptar()">
                     Encriptar
                 </button>
