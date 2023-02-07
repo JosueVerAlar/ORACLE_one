@@ -19,16 +19,17 @@
             </a>
         </header>
 
-        <main>
-            <img class="hombreAhorcado" src="" alt="hombre ahorcado">
+        <main class="nuevaPalabra">
 
-            <div class="adivinado"></div>
-
-            <div class="errado"></div>
+            <textarea class="entradaPalabra" placeholder="Ingrese una palabra" cols="50" rows="20"></textarea>
+            <br>
 
             <div class="botones">
-                <button class= "nuevoJuego" onclick="reiniciar()">Nuevo Juego</button>
-                <button class= "desistir" onclick="desistir()">Desistir</button>
+                <button class= "botonPrimario" onclick="guardarEmpezar()">Guardar y empezar</button>
+                
+                <a href="index.html">
+                    <button class= "botonSecundario">Cancelar</button>
+                </a>
             </div>
         </main>
 
