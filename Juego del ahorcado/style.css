@@ -59,17 +59,23 @@ body {
     justify-content: center;
     align-items: center;
 }
-.hombreAhorcado {
+.hombre {
     text-align: center;
-    margin-bottom: 6rem;
-    width: 100%;
+    width: 200px;
+    padding-bottom: 3.5rem;
 }
 
 .adivinado {
     text-align: center;
-    border-radius: 4.5rem;
 }
 
-.errado {
-
+.letra {
+    display: inline-block;
+    width: 4.5rem;
+    height: 4.5rem;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #0A3871;
+    text-decoration: underline;
 }
