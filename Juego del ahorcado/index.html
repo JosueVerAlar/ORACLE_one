@@ -4,20 +4,31 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>Juego del ahorcado</title>
     </head>
 
+    <!-- Este código es parte de la ruta de aprendizaje de Oracle-ONE y elaborado por
+    Josué Vergara Alarcón. Cualquier aclaracion o duda esta el contacto siguiente
+    jva.urbanismo@gmail.com -->
+
     <body>
-        <img src="" alt="hombre ahorcado">
+        <header>
+            <img id="recargar" src="images/Logo.png" alt="logo alura">
+        </header>
 
-        <div class="adivinado"></div>
+        <main>
+            <img class="hombreAhorcado" src="" alt="hombre ahorcado">
 
-        <div class="errado"></div>
+            <div class="adivinado"></div>
 
-        <div class="botones">
-            <button name="nuevo juego" onclick="reiniciar()"></button>
-            <button name="desistir" onclick="desistir()"></button>
-        </div>
+            <div class="errado"></div>
+
+            <div class="botones">
+                <button class= "nuevoJuego" onclick="reiniciar()">Nuevo Juego</button>
+                <button class= "desistir" onclick="desistir()">Desistir</button>
+            </div>
+        </main>
 
         <script src="app.js"></script>    
     </body>
