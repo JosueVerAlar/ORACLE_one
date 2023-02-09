@@ -1,0 +1,44 @@
+.flexContainer:last-child { margin-top: 2em; }
+body { margin: 0; padding: 0;}
+div { height: 50px; width: 50px; }
+div:nth-child(1) {background-color: red; width: 50px; height: 50px; }
+div:nth-child(2) {background-color: blue; }
+div:nth-child(3) {background-color: green; }
+div:nth-child(4) {background-color: yellow; }
+div:nth-child(5) {background-color: pink; }
+div:nth-child(6) {background-color: black; }
+div:nth-child(7) {background-color: orange; }
+div:nth-child(8) {background-color: silver; }
+
+header {
+    height: 2rem;
+}
+
+.flexContainer {
+    display: flex;
+    /* height: 800px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.flexItem {
+    flex-grow: 1; /*el espacio se divide una vez para cada elemento*/
+    flex-shrink: 1;
+}
+
+.primero {
+    flex-grow: 5;
+    flex-shrink: 4; /*cuando se reduce el espacio lo reduce 4 veces más que el resto de los elementos*/
+    flex-basis: 200px; /*funciona como un width pero dentro de flexbox*/
+}
+
+/*para simplificar el código anterior
+se puede escribir lo siguiente::after
+
+.primero {
+flex: 0      1       200%
+    grow | shrink | basis
+}
+
+*/
