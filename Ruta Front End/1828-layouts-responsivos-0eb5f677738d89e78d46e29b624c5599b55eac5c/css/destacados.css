@@ -23,6 +23,7 @@
 
 .destacados__panel-imagen {
     width: 100vw;
+    max-width: 600px; /*define el tamaño de pantalla máximo en el que se va a visualizar con un 100% la imagen, para mayores tamaños, la imagen, queda fija*/
     box-shadow: 0 2px 10px 5px #00000020;
     margin-bottom: 0.5rem;
 }
