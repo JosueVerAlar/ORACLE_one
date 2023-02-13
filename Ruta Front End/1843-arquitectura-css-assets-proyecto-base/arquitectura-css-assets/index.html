@@ -10,26 +10,41 @@
         <link href="./assets/css/reset.css" rel="stylesheet" />
         <link href="./assets/css/cabecera.css" rel="stylesheet" />
         <link href="./assets/css/style.css" rel="stylesheet" />
+        <link href="assets/css/menu/menu-item.css" rel="stylesheet" />
+        <link href="assets/css/menu/menu-link.css" rel="stylesheet" />
+        <link href="assets/css/header.css" rel="stylesheet" />
+        <link href="assets/css/menu-lista.css" rel="stylesheet" />
     </head>
 
     <body>
-        <header>
-            <img src="assets/img/logo.jpg" alt="">
-                <ul>
-                    <li>
-                        <a href="#">Inicio</a>
+        <header class="header">
+            <img class="logo" src="assets/img/logo.jpg" alt=""></img>
+            <nav class="menu">
+                <ul class="menu__lista">
+                    <li class="menu__lista-item">
+                        <a class="menu-link activo" href="#">Inicio</a>
                     </li>
-                    <li>
-                        <a href="#">Recetas</a>
+                    <li class="menu__lista-item">
+                        <a class="menu-link" href="#">Recetas</a>
                     </li>
-                    <li>
-                        <a href="#">Quienes somos</a>
+                    <li class="menu__lista-item">
+                        <a class="menu-link" href="#">Quienes somos</a>
                     </li>
-                    <li>
-                        <a href="#">Contacto</a>
+                    <li class="menu__lista-item">
+                        <a class="menu-link" href="#">Contacto</a>
                     </li>
                 </ul>
-            </img>
+            </nav>
         </header>
+
+        <section class="banner">
+            <img class="banner__imagen" src="" alt="">
+            <h2 class="banner__titulo">Reaprobeche mejor los alimentos</h2>
+        </section>
+
+        <section class="sobre">
+            <h2 class="sobre__titulo">Recetas para economizar y ganar salud</h2>
+            <p class="sobre__descripcion">Nuestras recetas ayudan a aprovechar mejor los alimentos, economizar, ganar tiempo y practicidad</p>
+        </section>
     </body>
 </html>
